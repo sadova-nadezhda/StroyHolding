@@ -1,0 +1,201 @@
+// ====== Catalog Tabs ======
+
+.catalog-tabs {
+  display: flex;
+  gap: calc(8 * var(--width-multiplier));
+  margin-bottom: calc(16 * var(--width-multiplier));
+  padding-bottom: calc(8 * var(--width-multiplier));
+  overflow-x: auto;
+}
+
+.catalog-tabs__button {
+  padding: calc(12 * var(--width-multiplier));
+  border: none;
+  border-radius: calc(8 * var(--width-multiplier));
+  color: var(--dark);
+  background-color: var(--bg);
+  font-size: calc(12 * var(--width-multiplier));
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  white-space: nowrap;
+
+  &.active {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  &:hover:not(.active) {
+    color: var(--primary);
+    background-color: var(--bg-red);
+  }
+}
+
+// ====== Catalog Toolbar ======
+
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  gap: calc(16 * var(--width-multiplier));
+  margin-bottom: calc(16 * var(--width-multiplier));
+
+  .category-tabs,
+  .catalog-tabs {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: calc(8 * var(--width-multiplier));
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+
+    &__actions {
+      order: 1;
+      width: 100%;
+    }
+
+    .category-tabs,
+    .catalog-tabs {
+      order: 2;
+      width: 100%;
+    }
+  }
+}
+
+// ====== Category Sub-Tabs ======
+
+.category-tabs {
+  display: flex;
+  gap: calc(8 * var(--width-multiplier));
+  margin-bottom: calc(16 * var(--width-multiplier));
+  padding-bottom: calc(8 * var(--width-multiplier));
+  overflow-x: auto;
+}
+
+.category-tabs__button {
+  padding: calc(12 * var(--width-multiplier));
+  border: none;
+  border-radius: calc(8 * var(--width-multiplier));
+  color: var(--dark);
+  background-color: var(--bg);
+  font-size: calc(12 * var(--width-multiplier));
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  white-space: nowrap;
+
+  &.active {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  &:hover:not(.active) {
+    color: var(--primary);
+    background-color: var(--bg-red);
+  }
+}
+
+// ====== Sort Dropdown ======
+
+.catalog-sort {
+  position: relative;
+  flex-shrink: 0;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: calc(4 * var(--width-multiplier));
+    padding: calc(12 * var(--width-multiplier));
+    border: 0;
+    border-radius: calc(8 * var(--width-multiplier));
+    background: var(--bg);
+    font: 600 calc(12 * var(--width-multiplier)) / 1 Manrope, sans-serif;
+    color: var(--dark);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color 0.2s ease;
+
+    svg {
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    &[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + calc(4 * var(--width-multiplier)));
+    right: 0;
+    min-width: 100%;
+    padding: calc(4 * var(--width-multiplier)) 0;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: calc(8 * var(--width-multiplier));
+    background: var(--white);
+    box-shadow: 0 calc(8 * var(--width-multiplier)) calc(24 * var(--width-multiplier)) rgba(0, 0, 0, 0.08);
+    list-style: none;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(calc(-4 * var(--width-multiplier)));
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s 0.15s;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+      transition-delay: 0s;
+    }
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    padding: calc(9 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+    border: none;
+    background: transparent;
+    font: 500 calc(13 * var(--width-multiplier)) / 1 Manrope, sans-serif;
+    color: var(--dark);
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background: var(--bg);
+    }
+
+    &.active {
+      color: var(--primary);
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex: 1 1 calc(50% - calc(4 * var(--width-multiplier)));
+  }
+}

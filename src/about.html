@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "О компании" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="hero section-hidden">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <a href="/" class="breadcrumb__item">Главная</a>
+            <span class="breadcrumb__sep">•</span>
+            <span class="breadcrumb__item breadcrumb__item--active">О компании</span>
+          </nav>
+          <div class="hero__container">
+            <div class="hero__content">
+              <h1 class="hero__title">О компании STROYHOLDING.KZ</h1>
+              <p class="hero__text">STROYHOLDING.KZ объединяет каталог строительных материалов и малярные услуги для частных, коммерческих и промышленных объектов.</p>
+            </div>
+            <div class="hero__img">
+              <img src="@img/about-hero.png" alt="О компании STROYHOLDING.KZ" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission section-hidden">
+        <div class="container">
+          <h2 class="mission__title title-indent">Миссия</h2>
+        </div>
+        <div class="mission__slider">
+          <div class="swiper missionSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mission-slide">
+                <div class="mission-slide__content">
+                  <h3 class="mission-slide__title">Подбор под объект</h3>
+                  <p class="mission-slide__text">Подбираем материалы и решения с учётом типа объекта, задачи и условий эксплуатации.</p>
+                </div>
+                <img class="mission-slide__img" src="@img/mission-1.png" alt="Подбор под объект" />
+                <div class="mission-slide__num">01</div>
+              </div>
+              <div class="swiper-slide mission-slide">
+                <div class="mission-slide__content">
+                  <h3 class="mission-slide__title">Понятный процесс</h3>
+                  <p class="mission-slide__text">Упрощаем путь клиента: от заявки и расчёта до поставки и сопровождения.</p>
+                </div>
+                <img class="mission-slide__img" src="@img/mission-2.png" alt="Понятный процесс" />
+                <div class="mission-slide__num">02</div>
+              </div>
+              <div class="swiper-slide mission-slide">
+                <div class="mission-slide__content">
+                  <h3 class="mission-slide__title">Комплексный подход</h3>
+                  <p class="mission-slide__text">Закрываем задачу не только товаром, но и дополнительными сервисами вокруг объекта.</p>
+                </div>
+                <img class="mission-slide__img" src="@img/mission-3.png" alt="Комплексный подход" />
+                <div class="mission-slide__num">03</div>
+              </div>
+              <div class="swiper-slide mission-slide">
+                <div class="mission-slide__content">
+                  <h3 class="mission-slide__title">Надёжное партнёрство</h3>
+                  <p class="mission-slide__text">Строим работу на точности, понятной коммуникации и доверии.</p>
+                </div>
+                <img class="mission-slide__img" src="@img/mission-4.png" alt="Надёжное партнёрство" />
+                <div class="mission-slide__num">04</div>
+              </div>
+              <div class="swiper-slide mission-slide">
+                <div class="mission-slide__content">
+                  <h3 class="mission-slide__title">Развитие вместе</h3>
+                  <p class="mission-slide__text">Постоянно расширяем ассортимент и улучшаем сервис под реальные задачи клиентов.</p>
+                </div>
+                <img class="mission-slide__img" src="@img/mission-5.png" alt="Развитие вместе" />
+                <div class="mission-slide__num">05</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-exp section-pad section-hidden">
+        <div class="container">
+          <div class="about-exp__container">
+            <div class="about-exp__content">
+              <h2 class="about-exp__title">Опыт, ассортимент и объекты</h2>
+              <p class="about-exp__text">Работаем с частными клиентами, подрядчиками и компаниями: подбираем материалы, организуем поставку и помогаем с услугами под задачи конкретного объекта.</p>
+            </div>
+            <div class="about-exp__card">
+              <img class="about-exp__img" src="@img/about-img.png" alt="" />
+              <div class="about-exp__stats">
+                <div class="about-exp__stat">
+                  <strong class="about-exp__stat-num">1000+ товаров</strong>
+                  <span class="about-exp__stat-text">в каталоге и под заказ</span>
+                </div>
+                <div class="about-exp__stat">
+                  <strong class="about-exp__stat-num">20+ брендов</strong>
+                  <span class="about-exp__stat-text">строительных и отделочных материалов</span>
+                </div>
+                <div class="about-exp__stat">
+                  <strong class="about-exp__stat-num">14+ лет</strong>
+                  <span class="about-exp__stat-text">на рынке строительных материалов</span>
+                </div>
+                <div class="about-exp__stat">
+                  <strong class="about-exp__stat-num">2000+ объектов</strong>
+                  <span class="about-exp__stat-text">с поставкой материалов и выполненными работами</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-contacts section-pad section-hidden">
+        <div class="container">
+          <h2 class="about-contacts__title title-indent">Контакты</h2>
+          <div class="contact__wrap">
+            <div class="contact-group">
+              <span class="contact-group__label">Телефон</span>
+              <div class="contact-group__managers">
+                <a href="tel:+77771349470" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (777) 134-94-70</div>
+                  <div class="contact-manager__name">Менеджер Владимир 
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+                <a href="tel:+77713773204" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (771) 377-32-04</div>
+                  <div class="contact-manager__name">Менеджер Лола 
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+                <a href="tel:+77771349468" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (777) 134-94-68</div>
+                  <div class="contact-manager__name">Менеджер Куандык
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+                <a href="tel:+77771349470" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (777) 134-94-70</div>
+                  <div class="contact-manager__name">Менеджер Арай
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+                <a href="tel:+77713773204" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (771) 377-32-04</div>
+                  <div class="contact-manager__name">Менеджер Лола 
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+                <a href="tel:+77758534033" class="contact-manager">
+                  <div class="contact-manager__phone">+7 (775) 853-40-33</div>
+                  <div class="contact-manager__name">Генеральный директор
+                    <span class="contact-manager__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-group">
+              <span class="contact-group__label">Email</span>
+              <div class="contact-group__emails">
+                <a href="mailto:ynow_dp@mail.ru" class="contact-email">
+                  <span class="contact-email__caption">ynow_dp@mail.ru</span>
+                  <span class="contact-email__txt">
+                    Возникли вопросы? Напишите нам! 
+                    <span class="contact-email__arrow">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66634 11.3333L11.333 4.66663M4.66634 4.66663H11.333V11.3333" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-group">
+              <span class="contact-group__label">График работы</span>
+              <div class="contact-schedule">
+                <div class="contact-schedule__item">
+                  <span class="contact-schedule__days">Понедельник<br>- пятница:</span>
+                  <span class="contact-schedule__time">09:00–18:00</span>
+                </div>
+                <div class="contact-schedule__item">
+                  <span class="contact-schedule__days">Суббота<br>- Воскресенье:</span>
+                  <span class="contact-schedule__time">Выходной</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-group">
+              <span class="contact-group__label">Наш адрес</span>
+              <div class="contact-address">
+                <span class="contact-address__city">Казахстан, Алматы</span>
+                <span class="contact-address__street">3 мкр, 21/1</span>
+              </div>
+            </div>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.1!2d76.8569!3d43.2585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDE1JzMwLjYiTiA3NsKwNTEnMjQuOCJF!5e0!3m2!1sru!2skz!4v1"
+                width="100%" height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Карта"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/feedback.html')
+    </main>
+
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Оформление заказа" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="order">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <a href="/" class="breadcrumb__item">Главная</a>
+            <span class="breadcrumb__sep">•</span>
+            <span class="breadcrumb__item breadcrumb__item--active">Оформление заказа</span>
+          </nav>
+
+          <h1 class="order__title title-indent">Оформить заказ</h1>
+
+          <div class="order__layout">
+
+            <div class="order__form-wrap">
+              <div class="order__form-label">Контактные данные для заявки</div>
+              <form class="order__form" novalidate>
+                <div class="order__field">
+                  <label class="order__field-label" for="order-name">ФИО*</label>
+                  <input class="order__field-input" type="text" id="order-name" placeholder="Ваше имя" required />
+                </div>
+                <div class="order__field">
+                  <label class="order__field-label" for="order-phone">Телефон*</label>
+                  <input class="order__field-input" type="tel" id="order-phone" placeholder="+7 (XXX) XXX XX-XX" required />
+                </div>
+                <div class="order__field order__field--textarea">
+                  <textarea class="order__field-input order__field-textarea" id="order-comment" placeholder="Комментарий / описание заказа" rows="6"></textarea>
+                </div>
+              </form>
+            </div>
+
+            <aside class="order-summary">
+              <div class="order-summary__top">
+                <div class="order-summary__row">
+                  <span class="order-summary__label">Итого товаров (3)</span>
+                  <span class="order-summary__value">3 235 ₸</span>
+                </div>
+                <div class="order-summary__row">
+                  <div class="order-summary__delivery-info">
+                    <span class="order-summary__label">Доставка</span>
+                    <span class="order-summary__delivery-hint">При заказе от 15 000 ₸</span>
+                  </div>
+                  <span class="order-summary__value order-summary__value--free">Бесплатно</span>
+                </div>
+              </div>
+
+              <div class="order-summary__items">
+                <div class="order-summary__items-scroll">
+                  <div class="order-summary__item">
+                    <div class="order-summary__item-img">
+                      <img src="@img/product-card-img.png" alt="BETEK FIBRIOUS AQUASET" />
+                    </div>
+                    <div class="order-summary__item-body">
+                      <div class="order-summary__item-top">
+                        <span class="order-summary__item-name text-up">BETEK FIBRIOUS AQUASET</span>
+                        <span class="order-summary__item-volume">1 кг</span>
+                      </div>
+                      <div class="order-summary__item-price-row">
+                        <span class="order-summary__item-price">3 235 ₸</span>
+                        <span class="order-summary__item-price-old">4 000 ₸</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-summary__item">
+                    <div class="order-summary__item-img">
+                      <img src="@img/product-card-img.png" alt="BETEK FIBRIOUS AQUASET" />
+                    </div>
+                    <div class="order-summary__item-body">
+                      <div class="order-summary__item-top">
+                        <span class="order-summary__item-name text-up">BETEK FIBRIOUS AQUASET</span>
+                        <span class="order-summary__item-volume">1 кг</span>
+                      </div>
+                      <div class="order-summary__item-price-row">
+                        <span class="order-summary__item-price">3 235 ₸</span>
+                        <span class="order-summary__item-price-old">4 000 ₸</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-summary__item">
+                    <div class="order-summary__item-img">
+                      <img src="@img/product-card-img.png" alt="BETEK FIBRIOUS AQUASET" />
+                    </div>
+                    <div class="order-summary__item-body">
+                      <div class="order-summary__item-top">
+                        <span class="order-summary__item-name text-up">BETEK FIBRIOUS AQUASET</span>
+                        <span class="order-summary__item-volume">1 кг</span>
+                      </div>
+                      <div class="order-summary__item-price-row">
+                        <span class="order-summary__item-price">3 235 ₸</span>
+                        <span class="order-summary__item-price-old">4 000 ₸</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-summary__bottom">
+                <div class="order-summary__row order-summary__row--total">
+                  <span class="order-summary__label order-summary__label--total">Итого к оплате</span>
+                  <div class="order-summary__total-prices">
+                    <span class="order-summary__value order-summary__value--total">9 705 ₸</span>
+                    <span class="order-summary__value order-summary__value--old">12 000 ₸</span>
+                  </div>
+                </div>
+                <button class="button button-primary order-summary__btn" type="submit" form="order-form">Оформить заявку</button>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

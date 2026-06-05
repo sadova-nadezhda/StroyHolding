@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "404 — Страница не найдена" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="not-found">
+        <div class="not-found__img">
+          <img src="@img/404.png" alt="404" />
+        </div>
+        <h1 class="not-found__title">Страница не найдена</h1>
+        <p class="not-found__text">Но у нас есть много интересного.<br>Давайте вернемся на главную страницу</p>
+        <a href="/" class="not-found__btn button">На главную</a>
+      </section>
+    </main>
+
+    @@include('html/foot.html')
+  </body>
+</html>

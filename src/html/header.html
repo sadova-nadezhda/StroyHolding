@@ -1,0 +1,309 @@
+<header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="/" class="header__logo">
+        <img src="@img/logo.png" alt="Stroyholding" />
+      </a>
+      <form action="#" class="header__search" role="search">
+        <button class="header__search-button" type="submit" aria-label="Найти">
+          <span class="header__search-icon"></span>
+        </button>
+        <input
+          type="search"
+          class="header__search-input"
+          placeholder="Поиск товара"
+          aria-label="Поиск товара"
+        />
+      </form>
+      <div class="header__actions">
+        <div class="header__catalog">
+          <button class="button button-primary header__action header__catalog-toggle" type="button" aria-expanded="false" aria-controls="header-catalog-menu">
+            <span class="header__catalog-icon">
+              <span></span><span></span><span></span><span></span>
+            </span>
+            <span>Каталог</span>
+          </button>
+          <div class="header__catalog-menu" id="header-catalog-menu">
+            <div class="header__catalog-inner">
+              <div class="header__catalog-left">
+                <p class="header__catalog-heading">Все категории</p>
+                <ul class="header__catalog-list">
+                  <li>
+                    <a href="#popular" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.9572 7.0185C13.1861 8.3 11.974 9.334 11.974 9.334C11.974 9.334 13.016 7.7345 13.0064 5.954C11.6865 4.6135 10.1603 3.543 8.92367 3C9.45694 6 4 7.5 4 11.9675C4 14.713 8.39041 17 8.39041 17C8.39041 17 6.26693 13.5 10.5331 11C9.99981 13.75 11.3181 13.798 11.806 14.713C12.2939 15.628 11.59 17 11.59 17C17.5386 14.452 16.5553 10.2325 13.9572 7.0185Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Популярное</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#construction" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.4633 4.57602V6.86477C11.4633 7.18289 11.2054 7.44079 10.8873 7.44079H4.57601C4.25789 7.44079 4 7.18289 4 6.86477V4.57602C4 4.25789 4.25789 4 4.57601 4H10.8873C11.2054 4 11.4633 4.25789 11.4633 4.57602Z" fill="black"/>
+                          <path d="M9.40004 8.85563V11.1444C9.40004 11.4625 9.14215 11.7204 8.82403 11.7204H4.57676C4.25864 11.7204 4.00075 11.4625 4.00075 11.1444V8.85563C4.00075 8.5375 4.25864 8.27961 4.57676 8.27961H8.82403C9.14215 8.27961 9.40004 8.5375 9.40004 8.85563Z" fill="black"/>
+                          <path d="M16 8.85563V11.1444C16 11.4625 15.7421 11.7204 15.424 11.7204H11.1767C10.8586 11.7204 10.6007 11.4625 10.6007 11.1444V8.85563C10.6007 8.5375 10.8586 8.27961 11.1767 8.27961H15.424C15.7421 8.27961 16 8.5375 16 8.85563Z" fill="black"/>
+                          <path d="M16 13.1352V15.424C16 15.7421 15.7421 16 15.424 16H4.57676C4.25864 16 4.00075 15.7421 4.00075 15.424V13.1352C4.00075 12.8171 4.25864 12.5592 4.57676 12.5592H15.424C15.7421 12.5592 16 12.8171 16 13.1352Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Конструктив и стройка</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#finishing" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.85 10.0913C11.8421 10.0038 11.6511 7.95128 11.6617 7.28877V7.26877L11.6643 7.24877C11.6643 7.24877 11.6988 6.89627 11.468 6.65376C11.2982 6.47626 11.0091 6.38626 10.6058 6.38626C10.5342 6.38626 10.4573 6.38876 10.375 6.39376L9.88685 6.43626C9.93991 6.45626 9.99297 6.47376 10.0487 6.48876C10.367 6.57376 11.0647 6.86877 10.7703 7.76877C10.7703 7.76877 9.7993 10.3263 10.2874 11.2613C10.3007 11.2838 10.3325 11.2963 10.3591 11.2888L10.4732 11.2638C10.5475 11.2463 10.6138 11.1938 10.6403 11.1263L10.7146 10.9588C10.7358 10.9088 10.7729 10.8688 10.8233 10.8413L11.8819 10.2863C11.8713 10.2313 11.8633 10.1738 11.8527 10.1163L11.85 10.0913Z" fill="black"/>
+                          <path d="M9.1243 7.87937H4.12437C4.05568 7.87937 4 7.93185 4 7.9966V8.45288C4 8.51618 4.0547 8.57008 4.12437 8.57008H9.1243C9.19396 8.57008 9.24866 8.51618 9.24866 8.45288V7.9966C9.24866 7.93185 9.19298 7.87937 9.1243 7.87937Z" fill="black"/>
+                          <path d="M9.1243 15.4421H4.12437C4.05568 15.4421 4 15.4946 4 15.5593V15.8828C4 15.9461 4.0547 16 4.12437 16H9.1243C9.19396 16 9.24866 15.9461 9.24866 15.8828V15.5593C9.24866 15.4946 9.19298 15.4421 9.1243 15.4421Z" fill="black"/>
+                          <path d="M4.14872 8.94623H9.10172V15.0663H4.14872V8.94623Z" fill="black"/>
+                          <path d="M14.2031 7.10627C13.8158 6.17876 14.3915 5.96626 14.3915 5.96626L14.9168 5.80126C15.0255 5.76626 15.0786 5.65125 15.0335 5.55125L14.4897 4.34374C14.4578 4.27624 14.3915 4.23374 14.3146 4.23124L10.3219 4.10624C10.1972 4.10124 10.0726 4.10124 9.94521 4.10124C9.35892 4.10124 8.77262 4.14374 8.19164 4.22874V4.22624L7.98471 4.03374C7.95553 4.00624 7.91573 3.99624 7.87594 4.00124L5.3371 4.42624C5.27873 4.43624 5.23363 4.48374 5.23363 4.54124V4.76125C5.23363 4.90625 5.47505 5.00875 5.47505 5.26875V6.38376H5.41403C5.38485 6.38376 5.36097 6.40876 5.36097 6.44376V6.87377C5.36097 6.90624 5.38485 6.93127 5.41403 6.93127L5.45648 6.93377V6.97627C5.45648 7.02627 5.42464 7.07377 5.37158 7.09377C5.25751 7.13627 5.03997 7.24127 4.82243 7.50377H8.42509C8.20755 7.24127 7.99001 7.13627 7.87594 7.09377C7.82553 7.07377 7.79105 7.02879 7.79105 6.97627V6.93377L7.83349 6.93127C7.86267 6.93127 7.88655 6.90627 7.88655 6.87377V6.44376C7.88655 6.40876 7.86267 6.38376 7.83349 6.38376H7.78574L7.82288 6.20376C7.86798 6.22126 7.91573 6.22876 7.96614 6.22626L10.3432 6.02126C12.2426 5.87626 12.0596 7.29377 12.0596 7.29377C12.049 7.94628 12.2453 10.0588 12.2453 10.0588C12.8077 13.3513 13.5346 13.0838 13.5346 13.0838L15.8241 12.4763C16.6677 11.5288 14.2031 7.10627 14.2031 7.10627Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Отделка и покрытия</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#engineering" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7714 10.8431C12.0257 10.4898 12.1757 10.0559 12.1757 9.58694V9.12413H14.7142C15.424 9.12413 16 9.7011 16 10.4134V14.7107C16 15.423 15.424 16 14.7142 16H9.96677C9.25692 16 8.68093 15.423 8.68093 14.7107V11.7356H10.0328C10.2534 11.7356 10.4666 11.702 10.6669 11.6399C10.732 11.6796 10.8082 11.7024 10.8898 11.7024H13.8571C14.0934 11.7024 14.2854 11.5099 14.2854 11.2727C14.2854 11.0355 14.0934 10.8431 13.8571 10.8431H11.7714ZM10.0328 4C10.7431 4 11.3186 4.57736 11.3186 5.28932V9.58694C11.3186 10.2989 10.7431 10.8763 10.0328 10.8763H5.28539C4.57554 10.8763 4 10.2989 4 9.58694V5.28932C4 4.57736 4.57554 4 5.28539 4H10.0328ZM6.14246 6.54548H9.10969C9.346 6.54548 9.53846 6.35302 9.53846 6.11583C9.53846 5.87864 9.346 5.6858 9.10969 5.6858H6.14246C5.90615 5.6858 5.71416 5.87864 5.71416 6.11583C5.71416 6.35302 5.90615 6.54548 6.14246 6.54548Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Инженерные системы</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#roofing" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.85 10.2837L10.6937 6.77415C10.5769 6.69444 10.4229 6.69444 10.306 6.77415L5.15013 10.2837C5.0562 10.3475 5 10.4536 5 10.567V14.657C4.99989 14.8463 5.15364 14.9999 5.34343 15C5.41261 15 5.4802 14.9792 5.53733 14.9403L10.5 11.5626L15.4625 14.9403C15.6193 15.047 15.8332 15.0068 15.9402 14.8504C15.9792 14.7934 16 14.726 16 14.657V10.567C16 10.4536 15.9439 10.3476 15.85 10.2837H15.85ZM5.05981 9.04569C4.95288 8.88927 4.99328 8.67603 5.15005 8.56931L10.3062 5.05979C10.423 4.98007 10.5769 4.98007 10.6937 5.05979L15.8499 8.56931C16.0067 8.67607 16.0471 8.88942 15.94 9.04582C15.833 9.20221 15.6191 9.24246 15.4623 9.13569L10.5 5.75796L5.53743 9.13569C5.38062 9.24237 5.16681 9.20208 5.05981 9.04569Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Кровля и гидроизоляция</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tools" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.1099 11.2583H9.48618C9.26366 11.2583 9.08564 11.4144 9.08564 11.6078V14.4993C9.08564 15.3295 9.85435 16 10.7991 16C11.7438 16 12.5105 15.3295 12.5105 14.4993V11.6078C12.5105 11.4144 12.3324 11.2583 12.1099 11.2583ZM10.4127 14.6536C10.4127 14.7512 10.3216 14.831 10.2104 14.831C10.0991 14.831 10.0081 14.7512 10.0081 14.6536V12.312C10.0081 12.2145 10.0991 12.1347 10.2104 12.1347C10.3216 12.1347 10.4127 12.2145 10.4127 12.312V14.6536ZM11.59 14.6536C11.59 14.7512 11.499 14.831 11.3877 14.831C11.2765 14.831 11.1854 14.7512 11.1854 14.6536V12.312C11.1854 12.2145 11.2765 12.1347 11.3877 12.1347C11.499 12.1347 11.59 12.2145 11.59 12.312V14.6536Z" fill="black"/>
+                          <path d="M8.30277 6.62135C8.30277 5.93308 7.882 5.33172 7.25287 5V6.41026L6.15037 7.00806L5.0499 6.41026V5C4.42077 5.32995 4 5.9313 4 6.62135C4 7.30785 4.42077 7.91098 5.04585 8.23916V12.7555C4.41875 13.0855 4 13.6886 4 14.3769C4 15.0634 4.42077 15.6665 5.0499 15.9982V14.588L6.15239 13.9902L7.25287 14.588V15.9982C7.882 15.6665 8.30277 15.0652 8.30277 14.3769C8.30277 13.6886 7.882 13.0872 7.25691 12.7573V8.2427C7.882 7.91276 8.30277 7.30785 8.30277 6.62135Z" fill="black"/>
+                          <path d="M14.0034 15.1326C14.0034 15.6115 14.4464 15.9982 14.9906 15.9982H15.0128C15.559 15.9982 16 15.6097 16 15.1326V14.6022H14.0034V15.1326Z" fill="black"/>
+                          <path d="M15.0007 5L14.0034 6.89985V6.90872H16V6.89985L15.0007 5Z" fill="black"/>
+                          <path d="M14.0034 7.26351H16V14.2474H14.0034V7.26351Z" fill="black"/>
+                          <path d="M10.3479 9.94743H11.3331V7.17836L11.768 6.26125L11.327 5H10.352L9.91099 6.26125L10.3479 7.17836V9.94743Z" fill="black"/>
+                          <path d="M11.9137 10.4867C11.9137 10.3856 11.8206 10.304 11.7053 10.304H9.97977C9.86446 10.304 9.77141 10.3856 9.77141 10.4867V10.9036H11.9157V10.4867H11.9137Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Инструменты и расходники</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__catalog-right">
+                <div class="header__catalog-group active">
+                  <div class="header__catalog-heading">Популярные категории</div>
+                  <div class="header__catalog-grid">
+                    <a href="category.html" class="catalog-category-card">
+                      <div class="catalog-category-card__body">
+                        <h3 class="catalog-category-card__title">Конструктив и стройка →</h3>
+                        <p class="catalog-category-card__desc">ЖБИ, арматура, сухие смеси, металлопрокат</p>
+                        <span class="catalog-category-card__count">40 товаров</span>
+                      </div>
+                      <div class="catalog-category-card__img">
+                        <img src="@img/category-1.png" alt="Конструктив и стройка" />
+                      </div>
+                    </a>
+                    <a href="category.html" class="catalog-category-card">
+                      <div class="catalog-category-card__body">
+                        <h3 class="catalog-category-card__title">Отделка и покрытия →</h3>
+                        <p class="catalog-category-card__desc">Краски, грунтовки, пигменты, напольные покрытия</p>
+                        <span class="catalog-category-card__count">64 товара</span>
+                      </div>
+                      <div class="catalog-category-card__img">
+                        <img src="@img/category-2.png" alt="Отделка и покрытия" />
+                      </div>
+                    </a>
+                    <a href="category.html" class="catalog-category-card">
+                      <div class="catalog-category-card__body">
+                        <h3 class="catalog-category-card__title">Кровля и гидроизоляция →</h3>
+                        <p class="catalog-category-card__desc">Профнастил, РИЗОЛИН, мастики, герметики</p>
+                        <span class="catalog-category-card__count">28 товаров</span>
+                      </div>
+                      <div class="catalog-category-card__img">
+                        <img src="@img/category-3.png" alt="Кровля и гидроизоляция" />
+                      </div>
+                    </a>
+                    <a href="category.html" class="catalog-category-card">
+                      <div class="catalog-category-card__body">
+                        <h3 class="catalog-category-card__title">Инженерные системы →</h3>
+                        <p class="catalog-category-card__desc">Люки, гидранты, трубы, колодцы и ёмкости</p>
+                        <span class="catalog-category-card__count">36 товаров</span>
+                      </div>
+                      <div class="catalog-category-card__img">
+                        <img src="@img/category-4.png" alt="Инженерные системы" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav">
+          <button class="button button-light header__action header__nav-toggle" type="button" aria-expanded="false" aria-controls="header-nav-menu">
+            <span class="header__nav-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span>Навигация</span>
+          </button>
+          <div class="header__nav-menu" id="header-nav-menu">
+            <div class="header__catalog-inner">
+              <div class="header__catalog-left">
+                <p class="header__catalog-heading">Все категории</p>
+                <ul class="header__catalog-list">
+                  <li>
+                    <a href="services.html" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.9572 7.0185C13.1861 8.3 11.974 9.334 11.974 9.334C11.974 9.334 13.016 7.7345 13.0064 5.954C11.6865 4.6135 10.1603 3.543 8.92367 3C9.45694 6 4 7.5 4 11.9675C4 14.713 8.39041 17 8.39041 17C8.39041 17 6.26693 13.5 10.5331 11C9.99981 13.75 11.3181 13.798 11.806 14.713C12.2939 15.628 11.59 17 11.59 17C17.5386 14.452 16.5553 10.2325 13.9572 7.0185Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Услуги</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="about.html" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.4633 4.57602V6.86477C11.4633 7.18289 11.2054 7.44079 10.8873 7.44079H4.57601C4.25789 7.44079 4 7.18289 4 6.86477V4.57602C4 4.25789 4.25789 4 4.57601 4H10.8873C11.2054 4 11.4633 4.25789 11.4633 4.57602Z" fill="black"/>
+                          <path d="M9.40004 8.85563V11.1444C9.40004 11.4625 9.14215 11.7204 8.82403 11.7204H4.57676C4.25864 11.7204 4.00075 11.4625 4.00075 11.1444V8.85563C4.00075 8.5375 4.25864 8.27961 4.57676 8.27961H8.82403C9.14215 8.27961 9.40004 8.5375 9.40004 8.85563Z" fill="black"/>
+                          <path d="M16 8.85563V11.1444C16 11.4625 15.7421 11.7204 15.424 11.7204H11.1767C10.8586 11.7204 10.6007 11.4625 10.6007 11.1444V8.85563C10.6007 8.5375 10.8586 8.27961 11.1767 8.27961H15.424C15.7421 8.27961 16 8.5375 16 8.85563Z" fill="black"/>
+                          <path d="M16 13.1352V15.424C16 15.7421 15.7421 16 15.424 16H4.57676C4.25864 16 4.00075 15.7421 4.00075 15.424V13.1352C4.00075 12.8171 4.25864 12.5592 4.57676 12.5592H15.424C15.7421 12.5592 16 12.8171 16 13.1352Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>О компании</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="news.html" class="header__catalog-link">
+                      <span class="header__catalog-link-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.5 4H9.5C8.92367 3.99988 8.36501 4.19889 7.91855 4.56335C7.47209 4.9278 7.16527 5.43532 7.05 6H7C6.46957 6 5.96086 6.21071 5.58579 6.58579C5.21071 6.96086 5 7.46957 5 8V12.5C5 12.8283 5.06466 13.1534 5.1903 13.4567C5.31594 13.76 5.50009 14.0356 5.73223 14.2678C6.20107 14.7366 6.83696 15 7.5 15H14.5C14.8978 15 15.2794 14.842 15.5607 14.5607C15.842 14.2794 16 13.8978 16 13.5V6.5C16 6.1717 15.9353 5.84661 15.8097 5.54329C15.6841 5.23998 15.4999 4.96438 15.2678 4.73223C15.0356 4.50009 14.76 4.31594 14.4567 4.1903C14.1534 4.06466 13.8283 4 13.5 4ZM11.5 12H7.5C7.36739 12 7.24021 11.9473 7.14645 11.8536C7.05268 11.7598 7 11.6326 7 11.5C7 11.3674 7.05268 11.2402 7.14645 11.1464C7.24021 11.0527 7.36739 11 7.5 11H11.5C11.6326 11 11.7598 11.0527 11.8536 11.1464C11.9473 11.2402 12 11.3674 12 11.5C12 11.6326 11.9473 11.7598 11.8536 11.8536C11.7598 11.9473 11.6326 12 11.5 12ZM11.5 10H7.5C7.36739 10 7.24021 9.94732 7.14645 9.85355C7.05268 9.75979 7 9.63261 7 9.5C7 9.36739 7.05268 9.24021 7.14645 9.14645C7.24021 9.05268 7.36739 9 7.5 9H11.5C11.6326 9 11.7598 9.05268 11.8536 9.14645C11.9473 9.24021 12 9.36739 12 9.5C12 9.63261 11.9473 9.75979 11.8536 9.85355C11.7598 9.94732 11.6326 10 11.5 10ZM15 13.5C15 13.6326 14.9473 13.7598 14.8536 13.8536C14.7598 13.9473 14.6326 14 14.5 14C14.3674 14 14.2402 13.9473 14.1464 13.8536C14.0527 13.7598 14 13.6326 14 13.5V8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6H8.09C8.19316 5.70823 8.38404 5.4555 8.63647 5.27647C8.8889 5.09744 9.19053 5.00087 9.5 5H13.5C13.8978 5 14.2794 5.15804 14.5607 5.43934C14.842 5.72064 15 6.10218 15 6.5V13.5Z" fill="black"/>
+                        </svg>
+                      </span>
+                      <span>Новости</span>
+                      <span class="header__catalog-link-arrow">›</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__catalog-right">
+                <div class="header__catalog-group active">
+                  <div class="header__catalog-heading">Популярные услуги</div>
+                  <div class="header__catalog-grid">
+                    <a class="services__card services-card" href="services-inner.html">
+                      <img src="@img/services-2.png" alt="Подбор системы покрытий" />
+                      <h3 class="services-card__title">
+                        Подбор системы покрытий
+                        <span>→</span>
+                      </h3>
+                    </a>
+                    <a class="services__card services-card" href="services-inner.html">
+                      <img src="@img/services-3.png" alt="Поставка на объект" />
+                      <h3 class="services-card__title">
+                        Поставка на объект
+                        <span>→</span>
+                      </h3>
+                    </a>
+                    <a class="services__card services-card" href="services-inner.html">
+                      <img src="@img/services-4.png" alt="Колеровка краски" />
+                      <h3 class="services-card__title">
+                        Колеровка краски
+                        <span>→</span>
+                      </h3>
+                    </a>
+                    <a class="services__card services-card" href="services-inner.html">
+                      <img src="@img/services-5.png" alt="Покраска фасадов" />
+                      <h3 class="services-card__title">
+                        Покраска фасадов
+                        <span>→</span>
+                      </h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="cart.html" class="header__cart" aria-label="Корзина">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.719 13.8078C10.948 13.2053 11.5932 12.9022 12.1672 13.1613C12.7334 13.4172 12.9891 14.1137 12.762 14.7111C12.5328 15.3136 11.8877 15.616 11.3137 15.3566C10.7476 15.1008 10.492 14.4052 10.719 13.8078ZM5.29614 13.0656C5.9176 13.0659 6.39964 13.6114 6.39966 14.256C6.39966 14.9007 5.91761 15.4462 5.29614 15.4465C4.67448 15.4465 4.19165 14.9009 4.19165 14.256C4.19167 13.6112 4.67449 13.0656 5.29614 13.0656ZM1.52075 0.149597C2.27978 0.149674 2.9249 0.710238 3.10376 1.49042L3.18384 1.84003H14.8352C15.0467 1.84003 15.2385 1.95596 15.3499 2.13788C15.4606 2.31895 15.4807 2.5463 15.4045 2.7453L13.0198 8.98651C12.9277 9.22729 12.7062 9.39471 12.4504 9.39471H4.91626L5.10376 10.2121C5.15179 10.4207 5.31766 10.5519 5.49341 10.5519H12.4534C12.8047 10.5519 13.0676 10.8582 13.0676 11.2082C13.0676 11.5581 12.8047 11.8644 12.4534 11.8644H5.49341C4.73451 11.8644 4.08938 11.3047 3.9104 10.5246L1.9104 1.80292C1.86256 1.59411 1.69665 1.46315 1.52075 1.46307H0.764893C0.413809 1.46307 0.149891 1.15661 0.149658 0.806824C0.149658 0.456843 0.413654 0.149597 0.764893 0.149597H1.52075ZM4.6145 8.08124H12.0383L13.9211 3.1535H3.4856L4.6145 8.08124Z" fill="black" stroke="black" stroke-width="0.3"/>
+          </svg>
+          <span class="header__cart-badge">0</span>
+        </a>
+        <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="header-mobile" id="header-mobile" aria-hidden="true">
+  <div class="header-mobile__overlay"></div>
+  <div class="header-mobile__drawer">
+    <div class="header-mobile__head">
+      <a href="/" class="header-mobile__logo">
+        <img src="@img/logo.png" alt="Stroyholding" />
+      </a>
+      <button class="header-mobile__close" type="button" aria-label="Закрыть меню">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L16 16M16 2L2 16" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="header-mobile__search" role="search">
+      <button class="header__search-button" type="submit" aria-label="Найти">
+        <span class="header__search-icon"></span>
+      </button>
+      <input type="search" class="header__search-input" placeholder="Поиск товара" aria-label="Поиск товара" />
+    </form>
+    <div class="header-mobile__body">
+      <div class="header-mobile__section">
+        <p class="header-mobile__section-title">Каталог</p>
+        <ul class="header-mobile__list">
+          <li><a href="#popular" class="header-mobile__link">Популярное</a></li>
+          <li><a href="#construction" class="header-mobile__link">Конструктив и стройка</a></li>
+          <li><a href="#finishing" class="header-mobile__link">Отделка и покрытия</a></li>
+          <li><a href="#engineering" class="header-mobile__link">Инженерные системы</a></li>
+          <li><a href="#roofing" class="header-mobile__link">Кровля и гидроизоляция</a></li>
+          <li><a href="#tools" class="header-mobile__link">Инструменты и расходники</a></li>
+        </ul>
+      </div>
+      <div class="header-mobile__section">
+        <p class="header-mobile__section-title">Разделы сайта</p>
+        <ul class="header-mobile__list">
+          <li><a href="services.html" class="header-mobile__link">Услуги</a></li>
+          <li><a href="news.html" class="header-mobile__link">Новости</a></li>
+          <li><a href="about.html" class="header-mobile__link">О компании</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

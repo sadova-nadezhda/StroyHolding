@@ -1,0 +1,47 @@
+<div class="product-card@@if (typeof status !== 'undefined' && status === 'out-of-stock'){ product-card--out-of-stock}@@if (typeof status !== 'undefined' && status === 'coming-soon'){ product-card--coming-soon}" data-category="@@category" data-subcategory="@@subcategory">
+  <a class="product-card__top" href="product.html">
+    <div class="product-card__badges">
+      <span class="product-card__badge product-card__badge-discount">-10%</span>
+      <span class="product-card__badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 0L7.62054 4.37946L12 6L7.62054 7.62054L6 12L4.37946 7.62054L0 6L4.37946 4.37946L6 0Z" fill="white"/>
+        </svg>
+        Популярное
+      </span>
+    </div>
+    <img src="@img/product-card-img.png" alt="" />
+  </a>
+
+  <div class="product-card__content">
+    <div class="product-card__group">
+      <h3 class="product-card__title text-up"><a href="product.html">Betek fibrious aquaset</a></h3>
+      <p class="product-card__description">Обмазочная гидроизоляция</p>
+      <ul class="product-card__volume">
+        <li>1 кг</li>
+        <li>Розница</li>
+      </ul>
+    </div>
+    @@if (typeof status !== 'undefined' && status === 'out-of-stock') {
+    <button class="product-card__button button button-light" type="button" disabled>Нет в наличии</button>
+    }
+    @@if (typeof status !== 'undefined' && status === 'coming-soon') {
+    <button class="product-card__button product-card__button--soon" type="button" disabled>Скоро в наличии</button>
+    }
+    @@if (typeof status === 'undefined' || status === '') {
+    <button class="product-card__button button button-secondary product-card__btn-cart" type="button">
+      <span class="product-card__cart-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.1667 12.5001C14.3297 12.5 14.4892 12.4522 14.6253 12.3624C14.7615 12.2726 14.8683 12.1449 14.9325 11.9951L17.4325 6.16172C17.4868 6.03497 17.5089 5.89672 17.4966 5.75937C17.4844 5.62201 17.4382 5.48984 17.3623 5.37471C17.2864 5.25958 17.1831 5.16508 17.0617 5.09969C16.9403 5.0343 16.8046 5.00007 16.6667 5.00005H5.83333V2.50005C5.83333 2.27904 5.74554 2.06708 5.58926 1.9108C5.43298 1.75451 5.22101 1.66672 5 1.66672H3.33333C3.11232 1.66672 2.90036 1.75451 2.74408 1.9108C2.5878 2.06708 2.5 2.27904 2.5 2.50005C2.5 2.72106 2.5878 2.93303 2.74408 3.08931C2.90036 3.24559 3.11232 3.33338 3.33333 3.33338H4.16667V13.3334C4.16667 13.9964 4.43006 14.6323 4.8989 15.1012C5.36774 15.57 6.00363 15.8334 6.66667 15.8334H14.1667C14.3877 15.8334 14.5996 15.7456 14.7559 15.5893C14.9122 15.433 15 15.2211 15 15.0001C15 14.779 14.9122 14.5671 14.7559 14.4108C14.5996 14.2545 14.3877 14.1667 14.1667 14.1667H6.66667C6.44565 14.1667 6.23369 14.0789 6.07741 13.9226C5.92113 13.7664 5.83333 13.5544 5.83333 13.3334V12.5001H14.1667Z" fill="#AF2D39"/>
+          <path d="M7.49984 18.3334C7.96007 18.3334 8.33317 17.9603 8.33317 17.5C8.33317 17.0398 7.96007 16.6667 7.49984 16.6667C7.0396 16.6667 6.6665 17.0398 6.6665 17.5C6.6665 17.9603 7.0396 18.3334 7.49984 18.3334Z" fill="#AF2D39"/>
+          <path d="M12.4998 18.3334C12.9601 18.3334 13.3332 17.9603 13.3332 17.5C13.3332 17.0398 12.9601 16.6667 12.4998 16.6667C12.0396 16.6667 11.6665 17.0398 11.6665 17.5C11.6665 17.9603 12.0396 18.3334 12.4998 18.3334Z" fill="#AF2D39"/>
+        </svg>
+      </span>
+      <span class="product-card__price-text">3 235 ₸</span>
+      <span class="product-card__in-cart-text">В корзине</span>
+      @@if (typeof oldPrice !== 'undefined' && oldPrice !== '') {
+      <span class="product-card__old-price">@@oldPrice</span>
+      }
+    </button>
+    }
+  </div>
+</div>

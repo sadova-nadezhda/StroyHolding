@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Конструктив и стройка" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="hero category-hero section-hidden">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <a href="/" class="breadcrumb__item">Главная</a>
+            <span class="breadcrumb__sep">•</span>
+            <a href="/" class="breadcrumb__item">Каталог</a>
+            <span class="breadcrumb__sep">•</span>
+            <span class="breadcrumb__item breadcrumb__item--active">Конструктив и стройка</span>
+          </nav>
+          <div class="hero__container">
+            <h1 class="hero__title">Конструктив и стройка</h1>
+          </div>
+        </div>
+      </section>
+      <section class="catalog section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="catalog__container">
+            <div class="catalog-toolbar">
+              @@include('html/category-tabs.html')
+              <div class="catalog-toolbar__actions">
+                <button class="catalog__filter-toggle" type="button">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  Фильтры
+                </button>
+                <div class="catalog-sort">
+                  <button class="catalog-sort__toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
+                    <span class="catalog-sort__label">По популярности</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.667 6.667L8 10l3.333-3.333H4.667Z" fill="currentColor"/>
+                    </svg>
+                  </button>
+                  <ul class="catalog-sort__menu" role="listbox">
+                    <li><button class="catalog-sort__option active" type="button" data-sort="popular">По популярности</button></li>
+                    <li><button class="catalog-sort__option" type="button" data-sort="price-asc">Сначала дешевле</button></li>
+                    <li><button class="catalog-sort__option" type="button" data-sort="price-desc">Сначала дороже</button></li>
+                    <li><button class="catalog-sort__option" type="button" data-sort="new">По новизне</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter-overlay"></div>
+
+            <div class="catalog__layout">
+
+              <aside class="catalog__sidebar">
+                <div class="catalog__sidebar-top">
+                  <h2 class="catalog__sidebar-title">Фильтры</h2>
+                  <button class="catalog__sidebar-close" type="button" aria-label="Закрыть фильтры">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 3L13 13M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="catalog-filter__wrap">
+                  <div class="catalog-filter open" data-filter="brands">
+                    <button class="catalog-filter__header" type="button">
+                      Бренды
+                      <span class="catalog-filter__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66663 6.66667L7.99996 10L11.3333 6.66667H4.66663Z" fill="#1D1B20"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="catalog-filter__body">
+                      <div class="catalog-filter__search">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 14L11.1 11.1" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="search" placeholder="Поиск бренда" />
+                      </div>
+                      <ul class="catalog-filter__list">
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Betek</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Betek</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Betek</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Betek</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="catalog-filter open" data-filter="price">
+                    <button class="catalog-filter__header" type="button">
+                      Цена
+                      <span class="catalog-filter__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66663 6.66667L7.99996 10L11.3333 6.66667H4.66663Z" fill="#1D1B20"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="catalog-filter__body">
+                      <div class="catalog-filter__range">
+                        <input type="number" class="catalog-filter__input" placeholder="От" />
+                        <input type="number" class="catalog-filter__input" placeholder="До" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-filter open" data-filter="availability">
+                    <button class="catalog-filter__header" type="button">
+                      Наличие
+                      <span class="catalog-filter__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66663 6.66667L7.99996 10L11.3333 6.66667H4.66663Z" fill="#1D1B20"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="catalog-filter__body">
+                      <ul class="catalog-filter__list">
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">В наличии</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Под заказ</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Нет в наличии</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="catalog-filter open" data-filter="packaging">
+                    <button class="catalog-filter__header" type="button">
+                      Тип фасовки
+                      <span class="catalog-filter__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.66663 6.66667L7.99996 10L11.3333 6.66667H4.66663Z" fill="#1D1B20"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="catalog-filter__body">
+                      <ul class="catalog-filter__list">
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Мешок</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Ведро</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter__item">
+                          <label class="catalog-filter__label">
+                            <input type="checkbox" class="catalog-filter__checkbox" />
+                            <span class="catalog-filter__name">Балон</span>
+                            <span class="catalog-filter__count">23</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <div class="catalog__content">
+                <div class="catalog__grid">
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "jbi"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "jbi"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "armatura"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "armatura"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "mixtures"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "mixtures"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "metal"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "metal"})
+                  @@include('html/product-card.html', {"category": "construction", "subcategory": "metal"})
+                </div>
+
+                <div class="catalog__footer">
+                  <button class="button button-light" type="button">Показать больше</button>
+                </div>
+
+                <div class="catalog-cta__container">
+                  <div class="catalog-cta__img">
+                    <img src="@img/feedback-img.png" alt="Не нашли нужный материал?" />
+                  </div>
+                  <div class="catalog-cta__content">
+                    <h2 class="catalog-cta__title">Не нашли нужный материал?</h2>
+                    <p class="catalog-cta__text">Оставьте заявку — менеджер уточнит характеристики, проверит наличие и предложит подходящие варианты из каталога или под заказ.</p>
+                    <a href="#" class="button button-light catalog-cta__btn">Оставить заявку</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

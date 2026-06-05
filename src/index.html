@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="home-hero section-hidden">
+        <div class="home-hero__slider">
+          <div class="swiper home-hero__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-title="Строительные материалы и решения для вашего объекта" style="background-image: url('img/hero-img-1.png')"></div>
+              <div class="swiper-slide" data-title="Поставка качественных материалов для любых задач" style="background-image: url('img/hero-img-2.png')"></div>
+              <div class="swiper-slide" data-title="Эффективные решения для строительных объектов" style="background-image: url('img/hero-img-3.png')"></div>
+              <div class="swiper-slide" data-title="Профессиональный подход к вашему строительству" style="background-image: url('img/hero-img-4.png')"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="home-hero__body">
+              <div class="home-hero__content">
+                <h1 class="home-hero__title">Строительные материалы и решения для вашего объекта</h1>
+              </div>
+              <div class="home-hero__thumbnails" aria-label="Переключатель слайдов">
+                <button class="home-hero__thumb active" type="button" data-slide="0" aria-label="Слайд 1"><img src="img/hero-img-1.png" alt="Слайд 1" /></button>
+                <button class="home-hero__thumb" type="button" data-slide="1" aria-label="Слайд 2"><img src="img/hero-img-2.png" alt="Слайд 2" /></button>
+                <button class="home-hero__thumb" type="button" data-slide="2" aria-label="Слайд 3"><img src="img/hero-img-3.png" alt="Слайд 3" /></button>
+                <button class="home-hero__thumb" type="button" data-slide="3" aria-label="Слайд 4"><img src="img/hero-img-4.png" alt="Слайд 4" /></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-catalog catalog section-pad section-hidden">
+        <div class="container">
+          <div class="home-catalog__container">
+            <h2 class="home-catalog__title title-indent">Каталог продукции</h2>
+            <div class="home-catalog__grid swiper homeCatalogSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "popular", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "popular", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "construction", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "construction", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "finishing", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "finishing", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "engineering", "subcategory": ""})</div>
+                <div class="swiper-slide">@@include('html/product-card.html', {"category": "roofing", "subcategory": ""})</div>
+              </div>
+            </div>
+            <div class="home-catalog__footer">
+              <a class="home-catalog__more button button-light" href="catalog.html">Показать больше</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-services services section-pad section-hidden">
+        <div class="container">
+          <div class="home-services__container">
+            <h2 class="home-services__title title-indent">Услуги</h2>
+            <div class="services__grid swiper servicesSwiper">
+              <div class="swiper-wrapper">
+                <a class="swiper-slide services__card services-card services-card_lg" href="services-inner.html">
+                  <img src="@img/services-1.png" alt="Расчёт материалов под объект" />
+                  <h3 class="services-card__title">
+                    Расчёт материалов под объект
+                    <span>→</span>
+                  </h3>
+                </a>
+                <a class="swiper-slide services__card services-card" href="services-inner.html">
+                  <img src="@img/services-2.png" alt="Подбор системы покрытий" />
+                  <h3 class="services-card__title">
+                    Подбор системы покрытий
+                    <span>→</span>
+                  </h3>
+                </a>
+                <a class="swiper-slide services__card services-card" href="services-inner.html">
+                  <img src="@img/services-3.png" alt="Поставка на объект" />
+                  <h3 class="services-card__title">
+                    Поставка на объект
+                    <span>→</span>
+                  </h3>
+                </a>
+                <a class="swiper-slide services__card services-card" href="services-inner.html">
+                  <img src="@img/services-4.png" alt="Колеровка краски" />
+                  <h3 class="services-card__title">
+                    Колеровка краски
+                    <span>→</span>
+                  </h3>
+                </a>
+                <a class="swiper-slide services__card services-card" href="services-inner.html">
+                  <img src="@img/services-5.png" alt="Покраска фасадов" />
+                  <h3 class="services-card__title">
+                    Покраска фасадов
+                    <span>→</span>
+                  </h3>
+                </a>
+              </div>
+            </div>
+            <div class="home-services__footer">
+              <a class="home-services__more button button-light" href="services.html">Все услуги</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/feedback.html')
+      <section class="home-about section-pad">
+        <div class="container">
+          <div class="home-about__container">
+            <img class="home-about__back" src="@img/home-about-img.png" alt="О компании" />
+            <div class="home-about__content">
+              <img class="home-about__logo" src="@img/logo-light.png" alt="Логотип компании" />
+              <h2 class="home-about__title">Строительные материалы и малярные работы для объектов любого масштаба</h2>
+              <p class="home-about__text">STROYHOLDING.KZ объединяет каталог строительных материалов и малярные услуги для частных, коммерческих и промышленных объектов.</p>
+              <a href="about.html" class="home-about__button button button-light">Узнать подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/work.html')
+      <section class="news section-pad section-hidden">
+        <div class="container">
+          <div class="news__container">
+            <h2 class="news__title title-indent">Новости</h2>
+            <div class="news__grid swiper newsSwiper">
+              <div class="swiper-wrapper">
+                <a class="swiper-slide news__card news-card" href="news-inner.html">
+                  <div class="news-card__img">
+                    <img src="@img/news-img.png" alt="" />
+                  </div>
+                  <h3 class="news-card__title">Как выбрать краску для фасадав</h3>
+                  <div class="news-card__desc">Разбираем, на что смотреть при выборе фасадной краски: тип основания, устойчивость к погоде, расход, цвет и подготовка поверхности.</div>
+                  <div class="news-card__date">06 мая, 2026г</div>
+                </a>
+                <a class="swiper-slide news__card news-card" href="news-inner.html">
+                  <div class="news-card__img">
+                    <img src="@img/news-img.png" alt="" />
+                  </div>
+                  <h3 class="news-card__title">Как выбрать краску для фасадав</h3>
+                  <div class="news-card__desc">Разбираем, на что смотреть при выборе фасадной краски: тип основания, устойчивость к погоде, расход, цвет и подготовка поверхности.</div>
+                  <div class="news-card__date">06 мая, 2026г</div>
+                </a>
+                <a class="swiper-slide news__card news-card" href="news-inner.html">
+                  <div class="news-card__img">
+                    <img src="@img/news-img.png" alt="" />
+                  </div>
+                  <h3 class="news-card__title">Как выбрать краску для фасадав</h3>
+                  <div class="news-card__desc">Разбираем, на что смотреть при выборе фасадной краски: тип основания, устойчивость к погоде, расход, цвет и подготовка поверхности.</div>
+                  <div class="news-card__date">06 мая, 2026г</div>
+                </a>
+                <a class="swiper-slide news__card news-card" href="news-inner.html">
+                  <div class="news-card__img">
+                    <img src="@img/news-img.png" alt="" />
+                  </div>
+                  <h3 class="news-card__title">Как выбрать краску для фасадав</h3>
+                  <div class="news-card__desc">Разбираем, на что смотреть при выборе фасадной краски: тип основания, устойчивость к погоде, расход, цвет и подготовка поверхности.</div>
+                  <div class="news-card__date">06 мая, 2026г</div>
+                </a>
+              </div>
+            </div>
+            <div class="news__footer">
+              <a class="news__more button button-light" href="news.html">Смотреть все новости</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
