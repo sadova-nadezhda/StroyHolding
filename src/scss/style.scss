@@ -47,6 +47,12 @@
     position: relative;
     width: 100%;
 
+    .swiper {
+      @media (max-width: 767px) {
+        overflow: visible;
+      }
+    }
+
     .swiper-wrapper {
       display: flex;
       width: 100%;

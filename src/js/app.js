@@ -772,7 +772,7 @@
 
     // Home-about section — content slides from right
     gsap.utils.toArray('.home-about__content').forEach((el) => {
-      gsap.from(el, { opacity: 0, x: 60, duration: 0.9, ease: 'power2.out', scrollTrigger: st(el) });
+      gsap.from(el, { opacity: 0, y: 60, duration: 0.9, ease: 'power2.out', scrollTrigger: st(el) });
     });
 
     // Inner page hero — split left / right
