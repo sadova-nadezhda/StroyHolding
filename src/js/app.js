@@ -744,6 +744,127 @@
   };
 
   // ======================
+  // Scroll Animations
+  // ======================
+  const initScrollAnimations = () => {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (window.lenis) {
+      window.lenis.on('scroll', () => ScrollTrigger.update());
+    }
+
+    const st = (trigger) => ({ trigger, start: 'top 88%', once: true });
+
+    // Section titles — each gets its own trigger
+    gsap.utils.toArray('.title-indent').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 28, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Feedback section — split left / right
+    gsap.utils.toArray('.feedback__content').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: -50, duration: 0.8, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+    gsap.utils.toArray('.feedback__img').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: 50, duration: 0.8, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Home-about section — content slides from right
+    gsap.utils.toArray('.home-about__content').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: 60, duration: 0.9, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Inner page hero — split left / right
+    gsap.utils.toArray('.hero__content').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: -40, duration: 0.8, delay: 0.1, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+    gsap.utils.toArray('.hero__img').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: 40, duration: 0.8, delay: 0.2, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // About exp — text + image + stats stagger
+    gsap.utils.toArray('.about-exp__content').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 30, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+    gsap.utils.toArray('.about-exp__img').forEach((el) => {
+      gsap.from(el, { opacity: 0, scale: 0.95, duration: 0.8, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+    const statsWrap = document.querySelector('.about-exp__stats');
+    if (statsWrap) {
+      gsap.from(gsap.utils.toArray('.about-exp__stat'), {
+        opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power2.out',
+        scrollTrigger: st(statsWrap),
+      });
+    }
+
+    // Service features grid — stagger
+    const featuresGrid = document.querySelector('.service-features__grid');
+    if (featuresGrid) {
+      gsap.from(gsap.utils.toArray('.service-feature', featuresGrid), {
+        opacity: 0, y: 25, duration: 0.6, stagger: 0.1, ease: 'power2.out',
+        scrollTrigger: st(featuresGrid),
+      });
+    }
+
+    // Services cards grid (non-swiper pages) — stagger
+    gsap.utils.toArray('.services__grid').forEach((grid) => {
+      if (grid.classList.contains('swiper')) return;
+      gsap.from(gsap.utils.toArray('.services-card', grid), {
+        opacity: 0, y: 25, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+        scrollTrigger: st(grid),
+      });
+    });
+
+    // FAQ items — stagger
+    const faqList = document.querySelector('.faq__list');
+    if (faqList) {
+      gsap.from(gsap.utils.toArray('.faq__item', faqList), {
+        opacity: 0, y: 20, duration: 0.5, stagger: 0.08, ease: 'power2.out',
+        scrollTrigger: st(faqList),
+      });
+    }
+
+    // Work / Mission / How sliders — animate as whole block
+    gsap.utils.toArray('.work__slider, .mission__slider, .how__slider').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 30, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Home swiper sections (catalog / services / news) — animate container
+    ['.homeCatalogSwiper', '.servicesSwiper', '.newsSwiper'].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) gsap.from(el, { opacity: 0, y: 25, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Section footer CTAs
+    gsap.utils.toArray('.home-catalog__footer, .home-services__footer, .news__footer').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 15, duration: 0.5, ease: 'power1.out', scrollTrigger: st(el) });
+    });
+
+    // Contact groups — stagger + map
+    const contactWrap = document.querySelector('.contact__wrap');
+    if (contactWrap) {
+      gsap.from(gsap.utils.toArray('.contact-group', contactWrap), {
+        opacity: 0, y: 20, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+        scrollTrigger: st(contactWrap),
+      });
+      const mapEl = document.querySelector('.contact-map');
+      if (mapEl) {
+        gsap.from(mapEl, { opacity: 0, y: 25, duration: 0.7, delay: 0.2, ease: 'power2.out', scrollTrigger: st(mapEl) });
+      }
+    }
+
+    // Catalog page product cards — stagger
+    const catalogGrid = document.querySelector('.catalog__grid');
+    if (catalogGrid) {
+      gsap.from(gsap.utils.toArray('.product-card', catalogGrid), {
+        opacity: 0, y: 20, duration: 0.5, stagger: 0.06, ease: 'power2.out',
+        scrollTrigger: st(catalogGrid),
+      });
+    }
+  };
+
+  // ======================
   // Map iframe scroll fix
   // ======================
   const initMapScrollFix = () => {
@@ -757,7 +878,7 @@
     });
   };
 
-  // ======================
+    // ======================
   // Boot
   // ======================
   document.addEventListener("DOMContentLoaded", () => {
@@ -790,6 +911,7 @@
     initHeaderScroll();
     initHeaderCatalog();
     initHeaderNav();
+    initScrollAnimations();
 
     if (typeof Fancybox !== "undefined") Fancybox.bind("[data-fancybox]");
 
