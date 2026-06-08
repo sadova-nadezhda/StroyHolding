@@ -47,12 +47,6 @@
     position: relative;
     width: 100%;
 
-    .swiper {
-      @media (max-width: 767px) {
-        overflow: visible;
-      }
-    }
-
     .swiper-wrapper {
       display: flex;
       width: 100%;
@@ -172,9 +166,8 @@
   }
   &-catalog {
     &__grid {
-      // Desktop: grid layout (Swiper disabled via breakpoint)
+      overflow: visible;
       @media (min-width: 768px) {
-        overflow: visible;
         height: auto;
 
         .swiper-wrapper {
