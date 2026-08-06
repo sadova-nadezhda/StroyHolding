@@ -939,6 +939,74 @@
         scrollTrigger: st(catalogGrid),
       });
     }
+
+    // Breadcrumbs
+    gsap.utils.toArray('.breadcrumb').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 12, duration: 0.5, ease: 'power1.out', scrollTrigger: st(el) });
+    });
+
+    // Title-only hero (category page) — hero без split-контента
+    gsap.utils.toArray('.hero__container').forEach((el) => {
+      if (el.querySelector('.hero__content, .hero__img')) return;
+      gsap.from(el, { opacity: 0, y: 24, duration: 0.7, delay: 0.1, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Catalog categories slider (catalog page)
+    const categoriesSlider = document.querySelector('.catalog-categories__slider');
+    if (categoriesSlider) {
+      gsap.from(categoriesSlider, { opacity: 0, y: 25, duration: 0.7, ease: 'power2.out', scrollTrigger: st(categoriesSlider) });
+    }
+
+    // Catalog toolbar — табы + сортировка
+    gsap.utils.toArray('.catalog-toolbar').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 18, duration: 0.6, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Catalog sidebar — только на десктопе (на мобилке это выезжающая панель)
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      gsap.utils.toArray('.catalog__sidebar').forEach((el) => {
+        gsap.from(el, { opacity: 0, x: -30, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+      });
+    }
+
+    // Catalog footer — кнопка «Показать больше»
+    gsap.utils.toArray('.catalog__footer').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 15, duration: 0.5, ease: 'power1.out', scrollTrigger: st(el) });
+    });
+
+    // Catalog CTA — split img / content
+    gsap.utils.toArray('.catalog-cta__img').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: -40, duration: 0.8, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+    gsap.utils.toArray('.catalog-cta__content').forEach((el) => {
+      gsap.from(el, { opacity: 0, x: 40, duration: 0.8, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // SEO-текст категории — блоком (сам .catalog-seo__content сворачивается через max-height)
+    gsap.utils.toArray('.catalog-seo__container').forEach((el) => {
+      gsap.from(el, { opacity: 0, y: 25, duration: 0.7, ease: 'power2.out', scrollTrigger: st(el) });
+    });
+
+    // Таблица материалов — обёртка + строки со стаггером
+    gsap.utils.toArray('.materials__container .table-wrap').forEach((wrap) => {
+      gsap.from(wrap, { opacity: 0, y: 25, duration: 0.7, ease: 'power2.out', scrollTrigger: st(wrap) });
+      const rows = gsap.utils.toArray('tbody tr', wrap);
+      if (rows.length) {
+        gsap.from(rows, {
+          opacity: 0, y: 12, duration: 0.5, stagger: 0.06, delay: 0.15, ease: 'power2.out',
+          scrollTrigger: st(wrap),
+        });
+      }
+    });
+
+    // Каталог материалов — карточки файлов со стаггером
+    const fileCards = document.querySelector('.catalog-materials__cards');
+    if (fileCards) {
+      gsap.from(gsap.utils.toArray('.file-card', fileCards), {
+        opacity: 0, y: 25, duration: 0.6, stagger: 0.1, ease: 'power2.out',
+        scrollTrigger: st(fileCards),
+      });
+    }
   };
 
   // ======================
