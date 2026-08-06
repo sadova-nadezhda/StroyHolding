@@ -4,6 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@@title</title>
   <link rel="icon" href="@img/favicon.png" />
+
+  <!-- Заранее поднимаем соединения к CDN: экономит DNS+TLS при первой загрузке -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"

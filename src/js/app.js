@@ -674,6 +674,83 @@
   };
 
   // ======================
+  // Tables — обёртка со скроллом для любых таблиц
+  // ======================
+  const initTables = () => {
+    $$("table").forEach((table) => {
+      // Число колонок → минимальная ширина таблицы (см. --table-cols в table.scss)
+      const cols = Array.from(table.rows).reduce((max, row) => {
+        const count = Array.from(row.cells).reduce((sum, cell) => sum + (cell.colSpan || 1), 0);
+        return Math.max(max, count);
+      }, 0);
+      if (cols) table.style.setProperty("--table-cols", cols);
+
+      // Обёртка со скроллом, если её не поставили в вёрстке
+      if (table.closest(".table-wrap")) return;
+      const wrap = document.createElement("div");
+      wrap.className = "table-wrap";
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    });
+  };
+
+  // ======================
+  // Catalog SEO "Читать больше"
+  // ======================
+  const initCatalogSeoMore = () => {
+    const blocks = $$(".catalog-seo").map((seo) => {
+      const content = seo.querySelector(".catalog-seo__content");
+      const btn = seo.querySelector(".catalog-seo__more");
+      if (!content || !btn) return null;
+
+      const openText = btn.textContent.trim() || "Читать больше";
+      const closeText = "Свернуть";
+
+      // Показывать кнопку только если текст не помещается в свёрнутую высоту
+      const refresh = () => {
+        if (seo.classList.contains("open")) return;
+        const overflows = content.scrollHeight > content.clientHeight + 1;
+        btn.classList.toggle("is-hidden", !overflows);
+      };
+
+      btn.addEventListener("click", () => {
+        const isOpen = seo.classList.contains("open");
+
+        if (isOpen) {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.offsetHeight; // reflow, чтобы сработал transition
+          seo.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+          btn.textContent = openText;
+          content.style.removeProperty("max-height");
+        } else {
+          seo.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+          btn.textContent = closeText;
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.addEventListener("transitionend", () => {
+            if (seo.classList.contains("open")) content.style.maxHeight = "none";
+          }, { once: true });
+        }
+
+        content.addEventListener("transitionend", () => window.lenis?.resize(), { once: true });
+      });
+
+      refresh();
+      return { seo, content, btn, refresh };
+    }).filter(Boolean);
+
+    if (!blocks.length) return;
+
+    window.addEventListener("resize", debounce(() => {
+      blocks.forEach(({ seo, content, refresh }) => {
+        if (seo.classList.contains("open")) content.style.maxHeight = "none";
+        refresh();
+      });
+    }, 150));
+  };
+
+  // ======================
   // Swiper - Home Catalog (mobile slider)
   // ======================
   const initHomeCatalogSwiper = () => {
@@ -904,6 +981,8 @@
     initCatalogTabs();
     initCategoryTabs();
     initSort();
+    initTables();
+    initCatalogSeoMore();
     initCartButtons();
     initMobileMenu({ scrollLock });
     initMobileFilter({ scrollLock });

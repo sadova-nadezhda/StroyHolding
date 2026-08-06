@@ -1,0 +1,136 @@
+// ====== Tables ======
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  --table-radius: calc(12 * var(--width-multiplier));
+  --table-line: 1px solid rgba(0, 0, 0, 0.05);
+
+  width: 100%;
+  max-width: 100%;
+  min-width: calc(var(--table-cols, 3) * 160 * var(--width-multiplier));
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: var(--table-line);
+  border-radius: var(--table-radius);
+  background: var(--white);
+  color: var(--dark);
+  text-align: left;
+  font-size: calc(16 * var(--width-multiplier));
+  font-weight: 500;
+  line-height: 1.2;
+
+  @media (max-width: 1024px) {
+    --table-radius: calc(8 * var(--width-multiplier));
+    font-size: calc(14 * var(--width-multiplier));
+  }
+
+  th,
+  td {
+    padding: calc(16 * var(--width-multiplier));
+    vertical-align: middle;
+    text-align: left;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+
+  th {
+    padding-top: calc(16 * var(--width-multiplier));
+    padding-bottom: calc(16 * var(--width-multiplier));
+    background: var(--bg);
+    font-weight: 700;
+  }
+
+  tbody th {
+    background: transparent;
+    font-weight: 600;
+  }
+
+  // ====== Разделители ячеек ======
+  tr > * {
+    border-top: var(--table-line);
+  }
+
+  tr > * + * {
+    border-left: var(--table-line);
+  }
+
+  thead tr > * + * {
+    border-left: 0;
+  }
+
+  thead > tr:first-child > *,
+  &:not(:has(thead)) > tbody:first-of-type > tr:first-child > * {
+    border-top: 0;
+  }
+
+  tbody tr {
+    transition: background-color 0.2s ease;
+  }
+
+  // ====== Скругление углов ======
+  thead > tr:first-child > *:first-child,
+  &:not(:has(thead)) > tbody:first-of-type > tr:first-child > *:first-child {
+    border-top-left-radius: var(--table-radius);
+  }
+
+  thead > tr:first-child > *:last-child,
+  &:not(:has(thead)) > tbody:first-of-type > tr:first-child > *:last-child {
+    border-top-right-radius: var(--table-radius);
+  }
+
+  tfoot > tr:last-child > *:first-child,
+  &:not(:has(tfoot)) > tbody:last-of-type > tr:last-child > *:first-child {
+    border-bottom-left-radius: var(--table-radius);
+  }
+
+  tfoot > tr:last-child > *:last-child,
+  &:not(:has(tfoot)) > tbody:last-of-type > tr:last-child > *:last-child {
+    border-bottom-right-radius: var(--table-radius);
+  }
+
+  caption {
+    margin-bottom: calc(12 * var(--width-multiplier));
+    color: var(--txt-light);
+    font-size: calc(14 * var(--width-multiplier));
+    font-weight: 500;
+    text-align: left;
+    caption-side: top;
+  }
+
+  // ====== Типографика внутри ячеек ======
+  p {
+    margin: 0;
+
+    & + p {
+      margin-top: calc(8 * var(--width-multiplier));
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: calc(18 * var(--width-multiplier));
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

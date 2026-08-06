@@ -475,3 +475,56 @@
     font-weight: 500;
   }
 }
+
+// ====== Catalog SEO ======
+.catalog-seo {
+  padding-top: calc(24 * var(--width-multiplier));
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(16 * var(--width-multiplier));
+    padding: calc(24 * var(--width-multiplier));
+    border-radius: calc(12 * var(--width-multiplier));
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    @media (max-width: 767px) {
+      padding: calc(16 * var(--width-multiplier));
+    }
+  }
+
+  &__title {
+    font-size: calc(20 * var(--width-multiplier));
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: calc(16 * var(--width-multiplier));
+    max-height: calc(74 * var(--width-multiplier));
+    overflow: hidden;
+    font-size: calc(16 * var(--width-multiplier));
+    font-weight: 500;
+    line-height: 1.2;
+    transition: max-height 0.4s ease;
+  }
+
+  &__more {
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007AFF;
+    font-family: inherit;
+    font-size: calc(16 * var(--width-multiplier));
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: underline;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}

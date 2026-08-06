@@ -1,0 +1,117 @@
+// ====== Catalog materials (карточки файлов) ======
+
+.catalog-materials {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(24 * var(--width-multiplier));
+
+    @media (max-width: 1024px) {
+      gap: calc(16 * var(--width-multiplier));
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.file-card {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(24 * var(--width-multiplier));
+  padding: calc(24 * var(--width-multiplier));
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: calc(12 * var(--width-multiplier));
+  background: var(--white);
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 767px) {
+    gap: calc(16 * var(--width-multiplier));
+    padding: calc(16 * var(--width-multiplier));
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(64 * var(--width-multiplier));
+    height: calc(64 * var(--width-multiplier));
+    border-radius: calc(12 * var(--width-multiplier));
+    background: var(--bg);
+
+    img {
+      width: calc(32 * var(--width-multiplier));
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 767px) {
+      width: calc(48 * var(--width-multiplier));
+      height: calc(48 * var(--width-multiplier));
+
+      img {
+        width: calc(24 * var(--width-multiplier));
+        height: auto;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(8 * var(--width-multiplier));
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: calc(20 * var(--width-multiplier));
+    font-weight: 600;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+      font-size: calc(16 * var(--width-multiplier));
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: calc(16 * var(--width-multiplier));
+    font-weight: 500;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+      font-size: calc(14 * var(--width-multiplier));
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: calc(16 * var(--width-multiplier));
+    flex-wrap: wrap;
+    margin-top: calc(16 * var(--width-multiplier));
+  }
+
+  &__btn {
+    padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+    border-radius: calc(8 * var(--width-multiplier));
+
+    @media (max-width: 767px) {
+      width: max-content;
+      padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+    }
+  }
+
+  &__meta {
+    font-size: calc(14 * var(--width-multiplier));
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}
