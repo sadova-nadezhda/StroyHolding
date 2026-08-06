@@ -2850,6 +2850,10 @@ input:focus-visible {
   transition: max-height 0.4s ease;
 }
 
+.catalog-seo__content > * {
+  flex: 0 0 auto;
+}
+
 .catalog-seo__more {
   margin-left: auto;
   padding: 0;

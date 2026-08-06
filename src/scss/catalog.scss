@@ -508,6 +508,12 @@
     font-weight: 500;
     line-height: 1.2;
     transition: max-height 0.4s ease;
+
+    // Внутри свёрнутого блока flex-элементы со своим скроллом (.table-wrap)
+    // сжимаются до нуля — из-за этого scrollHeight занижен и раскрытие дёргается
+    > * {
+      flex: 0 0 auto;
+    }
   }
 
   &__more {

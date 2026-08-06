@@ -713,6 +713,20 @@
         btn.classList.toggle("is-hidden", !overflows);
       };
 
+      // Ждём окончания анимации именно max-height самого блока:
+      // transitionend всплывает и от вложенных элементов (строки таблицы и т.п.)
+      let endHandler = null;
+      const onEnd = (fn) => {
+        if (endHandler) content.removeEventListener("transitionend", endHandler);
+        endHandler = (e) => {
+          if (e.target !== content || e.propertyName !== "max-height") return;
+          content.removeEventListener("transitionend", endHandler);
+          endHandler = null;
+          fn();
+        };
+        content.addEventListener("transitionend", endHandler);
+      };
+
       btn.addEventListener("click", () => {
         const isOpen = seo.classList.contains("open");
 
@@ -723,17 +737,17 @@
           btn.setAttribute("aria-expanded", "false");
           btn.textContent = openText;
           content.style.removeProperty("max-height");
+          onEnd(() => window.lenis?.resize());
         } else {
           seo.classList.add("open");
           btn.setAttribute("aria-expanded", "true");
           btn.textContent = closeText;
           content.style.maxHeight = content.scrollHeight + "px";
-          content.addEventListener("transitionend", () => {
+          onEnd(() => {
             if (seo.classList.contains("open")) content.style.maxHeight = "none";
-          }, { once: true });
+            window.lenis?.resize();
+          });
         }
-
-        content.addEventListener("transitionend", () => window.lenis?.resize(), { once: true });
       });
 
       refresh();
